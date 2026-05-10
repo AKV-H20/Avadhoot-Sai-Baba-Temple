@@ -69,11 +69,11 @@ body {
 <body>
 
 <div class="topnav" id="myTopnav">
-  <a href="index.html">Home</a>
-  <a href="a.html" class="active">12 Principles of Animation</a>
-  <a href="b.html">Animation in Video Games</a>
-  <a href="c.html">2D and 3D Animation Tips</a>
-  <a href="d.html">References</a>
+  <a href="github">insert</a>
+  <a href="github" class="active">insert</a>
+  <a href="github">insert</a>
+  <a href="github">insert</a>
+  <a href="github">insert</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
