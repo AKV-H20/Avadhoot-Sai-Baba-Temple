@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Programs&Events - Avadhoot Sai Baba Temple</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #FFCC99;
+        }
+        .topnav {
+            overflow: hidden;
+            background-color: #de5656;
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 20px; /* Sized down slightly for elegant mobile text fitting */
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #D3D3D3;
+            color: black;
+        }
+
+        .topnav .icon {
+            display: none;
+        }
+
+        /* FIXED: Swapped typo brace for parenthesis */
+        @media screen and (max-width: 600px) {
+            .topnav a:not(:first-child) { display: none; }
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .topnav.responsive { position: relative; }
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }       
+    </style>
+    <style>
+        .marquee {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+            position: relative;
+            background-color: #B0E0E6;
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px; /* Reduced to look proportions-accurate on mobile screens */
+            padding: 10px 0;
+        }
+        .marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 25s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        .content-padding {
+            padding: 0 16px;
+        }
+        
+        .responsive-img {
+            width: 50%;
+            max-width: 100%;
+            height: auto;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .responsive-img {
+                width: 92%; /* Expands size dynamically so you don't need magnifying glasses on smaller screens */
+            }
+        }
+      
+        /* Main structure layout */
+        .main-content-wrapper {
+            padding: 0 16px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .bio-container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .bio-text {
+            flex: 3;
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+        .bio-image-wrapper {
+            flex: 2;
+            display: flex;
+            justify-content: center;
+        }
+
+        .bio-image-wrapper img {
+            width: 85%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .temple-main-img {
+            width: 60%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px auto;
+            display: block;
+        }
+
+        /* Contact Us layout spanning full screen on computer */
+        .full-width-footer {
+            background-color: white;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            box-sizing: border-box;
+            padding: 40px 16px;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        /* Mobile Adjustments */
+        @media screen and (max-width: 768px) {
+            .bio-container {
+                flex-direction: column; 
+                gap: 20px;
+                text-align: center;
+            }
+            .bio-container:nth-of-type(2) {
+                flex-direction: column-reverse; 
+            }
+            .bio-text {
+                font-size: 16px;
+                line-height: 1.6;
+            }
+            .temple-main-img {
+                width: 90%;
+            }
+            .full-width-footer {
+                width: auto;
+                left: auto;
+                right: auto;
+                margin-left: 0;
+                margin-right: 0;
+                border-radius: 8px;
+                padding: 25px 16px;
+                margin-top: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+        <a href="aboutUs.html" class="active">About Us</a>
+        <a href="Live.html">Livestreams</a>
+        <a href="ProgramsNEvents">Temple Programs & Events</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    
+    <div class="marquee">
+        <span>
+            Welcome to the Avadhoot Sai Baba Temple! You are invited to the Baba Prathishta Dinam Event on June 27th, 2026! Check out Temple Programs and Events for more information!
+        </span>
+    </div>
+    
+    <!-- Wrapped inside a global element to keep center profiles neatly aligned -->
+    <div class="main-content-wrapper">
+        <br>
+        <div style="text-align: center;"> 
+            <h1 style="font-size: 2.5em; margin-bottom: 10px;">About Us</h1>
+            <p style="font-size: 18px; color: #333; max-width: 700px; margin: 0 auto;">Avadhoot Sai Baba Temple, Sri Vadivudayambal Nagar, Neithavayal, Tamil Nadu 601203, India</p>
+            <img src="images/Temple" class="temple-main-img" alt="Image of Temple">
+            
+            <br>
+            <h1 style="font-size: 2.3em;">Our Founders</h1>
+            <br>
+        </div>
+
+        <!-- Founder Block 1 (English) -->
+        <div class="bio-container">
+            <div class="bio-text">
+                <p>Founded on the principles of universal love, equality, and selfless service, the Avadoot Saibaba Temple in Nandiyambakkam was born from the deep spiritual devotion and vision of Mrs. Bhuvaneswari and her late husband, Sri Venkatasubramanian. Driven by a lifelong desire to help others and a profound calling to spread Shirdi Sai Baba's message of peace, Mrs. Bhuvaneswari generously donated their own land and savings to lay the foundation. Locals recall a long-standing hearsay that several years ago, a noble person predicted a Sai temple would one day grace this site; today, it is widely believed that Mrs. Bhuvaneswari was the chosen vessel to carry out His divine will. With the ultimate blessings of Baba, alongside the heartfelt donations of family, friends, kind strangers, and the invaluable support of the local villagers, the temple successfully came into being in July 2017. Now managed by the Shri Shirdi Sai Avadhoot Spiritual Trust, the temple operates as a welcoming sanctuary for all, with Mrs. Bhuvaneswari overseeing its daily operations from Chennai to ensure it remains a pillar of positivity and unity for the entire community.</p>
+            </div>
+            <div class="bio-image-wrapper">
+                <img src="images/buna" alt="Image of Founder">
+            </div>
+        </div>
+
+        <!-- Founder Block 2 (Tamil) -->
+        <div class="bio-container">
+            <div class="bio-image-wrapper">
+                <img src="images/secondimageofbuna" alt="Another Image of Founder">
+            </div>
+            <div class="bio-text" style="font-family: 'Noto Sans Tamil', sans-serif;">
+                <p>அனைவரிடமும் அன்பு, சமத்துவம் மற்றும் சுயநலமற்ற சேவை ஆகிய கொள்கைகளின் அடிப்படையில், நந்தியம்பாக்கத்தில் உள்ள அவதூத் சாய்பாபா கோயில், திருமதி புவனேஸ்வரி மற்றும் அவரது மறைந்த கணவர் ஸ்ரீ வெங்கடசுப்பிரமணியன் ஆகியோரின் ஆழ்ந்த ஆன்மீக பக்தி மற்றும் தொலைநோக்குப் பார்வையால் உருவாக்கப்பட்டது. பிறருக்கு உதவ வேண்டும் என்ற வாழ்நாள் விருப்பத்தினாலும், ஷீரடி சாய்பாபாவின் அமைதிச் செய்தியைப் பரப்ப வேண்டும் என்ற உன்னத அழைப்பினாலும் உந்தப்பட்டு, திருமதி புவனேஸ்வரி இக்கோயிலை அமைப்பதற்கான நிலத்தையும் தங்கள் சேமிப்புப் பணத்தையும் தாராளமாக வழங்கினார். பல ஆண்டுகளுக்கு முன்பே, ஒரு மகான் இந்த இடத்தில் ஒரு நாள் சாய்பாபா கோயில் அமையும் என்று கணித்திருந்ததாக அப்பகுதி மக்கள் கூறுகின்றனர்; இன்று, பாபாவின் தெய்வீக விருப்பத்தை நிறைவேற்றத் தேர்ந்தெடுக்கப்பட்ட கருவியாகத் திருமதி புவனேஸ்வரி திகழ்ந்தார் என்று பரவலாக நம்பப்படுகிறது. பாபாவின் ஆசியுடனும், குடும்பத்தினர், நண்பர்கள் மற்றும் அறிமுகம் இல்லாத நல்லுள்ளங்களின் மனப்பூர்வமான நன்கொடைகள் மற்றும் உள்ளூர் கிராம மக்களின் விலைமதிப்பற்ற ஆதரவுடனும், இக்கோயில் ஜூலை 2017-ல் வெற்றிகரமாக உருவாக்கப்பட்டது. தற்போது 'ஸ்ரீ ஷீரடி சாய் அவதூத் ஸ்பிரிச்சுவல் டிரஸ்ட்' (Shri Shirdi Sai Avadhoot Spiritual Trust) மூலம் நிர்வகிக்கப்படும் இக்கோயில், அனைவருக்கும் ஒரு வரவேற்புமிக்க ஆன்மீகத் தலமாகத் திகழ்கிறது; ஒட்டுமொத்த சமூகத்திற்கும் நேர்மறை எண்ணங்கள் மற்றும் ஒற்றுமையின் மையமாக இது விளங்குவதை உறுதிசெய்யும் வகையில், திருமதி புவனேஸ்வரி சென்னையிலிருந்தே இதன் அன்றாட செயல்பாடுகளைக் கண்காணித்து வருகிறார்.</p>
+            </div>
+        </div>
+  
+  <br><br>
+        
+        <div class="container main-footer" style="background-color: white; padding: 20px; margin-top: 20px; border-radius: 8px;">
+            <div style="text-align: center;">
+                <h2>Contact Us</h2>
+                <p style="font-size: 18px;">Email or Phone us with any questions, comments, or concerns!</p>
+                <p style="font-size: 16px;"><strong>Email:</strong> avadhootsainm@gmail.com</p>
+                <p style="font-size: 16px;"><strong>Phone:</strong> 988-471-0828</p>
+            </div>
+        </div>
+        
+        <br>
+        <div class="copyrights-wrapper" style="text-align: center; padding-bottom: 30px;">
+            <small>
+                <a href="https://akv-h20.github.io/Avadoot-Sai-Baba-Temple/index.html" style="color: black; text-decoration: none;">
+                    <strong>Shri Shirdi Avadhoot Sai Baba Spiritual Trust</strong>
+                </a> 
+                <i class="fa fa-copyright"></i> 2026 BUILT BY 
+                <a href="https://akv-h20.github.io/Avadoot-Sai-Baba-Temple/index.html" style="color: black; text-decoration: none;">
+                    <strong>AKV-H20</strong>
+                </a>                                                            
+            </small>
+        </div>
+    </div> 
+
+    <script> 
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+</html>
