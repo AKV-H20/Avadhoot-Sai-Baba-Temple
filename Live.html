@@ -87,7 +87,7 @@
 
         .content-padding {
             padding: 0 16px;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
@@ -98,16 +98,7 @@
             height: auto;
             border-radius: 50%;
             margin-top: 20px;
-        }
-
-        .responsive-video {
-            width: 95%;
-            max-width: 640px;
-            height: auto;
-            display: block;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-            margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
         }
 
         .live-btn {
@@ -121,9 +112,39 @@
             border-radius: 25px;
             margin: 10px 0;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: background-color 0.2s ease;
         }
         .live-btn:hover {
             background-color: #c44545;
+        }
+
+        /* NEW: Photo Gallery Grid Styling */
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-top: 25px;
+            padding: 0 10px;
+        }
+
+        .photo-card {
+            overflow: hidden;
+            border-radius: 12px;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
         }
 
         /* Contact Us layout matching Programs & Events style but full-screen on desktop */
@@ -136,13 +157,12 @@
             margin-left: -50vw;
             margin-right: -50vw;
             box-sizing: border-box;
-            padding: 20px; /* Matched to Programs & Events wrapper padding */
+            padding: 20px;
             margin-top: 40px;
             text-align: center;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
-        /* Container element inside the footer to match structure layout */
         .footer-inner-content {
             max-width: 800px;
             margin: 0 auto;
@@ -151,6 +171,13 @@
         @media screen and (max-width: 768px) {
             h1 { font-size: 24px; }
             p { font-size: 16px; }
+            .photo-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 12px;
+            }
+            .photo-card img {
+                height: 150px;
+            }
             .full-width-footer {
                 width: auto;
                 left: auto;
@@ -195,18 +222,22 @@
             <br>
             
             <h1>See our pictures and videos of the month here!</h1>
-            <br>
-            <p> Avadhoot Sai Prana Prathishta Celebration commemorating 9th anniversary of Avadhoot Sai Prana Prathishtam, completed successfully with blessings of Baba on June 27th 2026. </p>
-            <img src="images/IMG_5081.jpg" alt="image from festival" class="responsive-avatar">
-            <img src="images/IMG_5083.jpg" alt="image from festival" class="responsive-avatar">
-            <img src="images/IMG_5087.jpg" alt="image from festival" class="responsive-avatar">
-            <img src="images/IMG_5088.jpg" alt="image from festival" class="responsive-avatar">
-            <img src="images/IMG_5089.jpg" alt="image from festival" class="responsive-avatar">
-            <img src="images/IMG_5091.jpg" alt="image from festival" class="responsive-avatar">
-            <img src="images/IMG_5094.jpg" alt="image from festival" class="responsive-avatar">
-            <img src="images/IMG_5095.jpg" alt="image from festival" class="responsive-avatar">
-            <img src="images/IMG_5098.jpg" alt="image from festival" class="responsive-avatar">
-            
+            <p style="max-width: 650px; margin: 0 auto 20px auto; line-height: 1.5;">
+                Avadhoot Sai Prana Prathishta Celebration commemorating 9th anniversary of Avadhoot Sai Prana Prathishtam, completed successfully with blessings of Baba on June 27th 2026.
+            </p>
+
+            <!-- Organized Photo Gallery -->
+            <div class="photo-gallery">
+                <div class="photo-card"><img src="images/IMG_5081.jpg" alt="image from festival"></div>
+                <div class="photo-card"><img src="images/IMG_5083.jpg" alt="image from festival"></div>
+                <div class="photo-card"><img src="images/IMG_5087.jpg" alt="image from festival"></div>
+                <div class="photo-card"><img src="images/IMG_5088.jpg" alt="image from festival"></div>
+                <div class="photo-card"><img src="images/IMG_5089.jpg" alt="image from festival"></div>
+                <div class="photo-card"><img src="images/IMG_5091.jpg" alt="image from festival"></div>
+                <div class="photo-card"><img src="images/IMG_5094.jpg" alt="image from festival"></div>
+                <div class="photo-card"><img src="images/IMG_5095.jpg" alt="image from festival"></div>
+                <div class="photo-card"><img src="images/IMG_5098.jpg" alt="image from festival"></div>
+            </div>
             
         </div>
         <br>
